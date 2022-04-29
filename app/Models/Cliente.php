@@ -12,7 +12,7 @@ class Cliente extends Model
     use HasFactory;
     protected $table = "clientes";
 
-    function cidades(){
+    function cidade(){
         return $this->belongsTo(Cidade::class, 'id_cidade', 'id');
     }
 }
