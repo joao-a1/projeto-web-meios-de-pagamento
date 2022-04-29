@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('cidades', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 200);
-            $table->string('cep', 10);
             $table->string('estado', 2);
             $table->timestamps();
         });
