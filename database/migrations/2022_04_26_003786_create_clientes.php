@@ -23,8 +23,10 @@ return new class extends Migration
             $table->string('n_conta', 10);
             $table->double('saldo', 20, 2);
             $table->unsignedBigInteger('id_cidade')->nullable();
+            $table->unsignedBigInteger('id_saldo')->nullable();
 
             $table->foreign('id_cidade')->references('id')->on('cidades');
+            $table->foreign('id_saldo')->references('id')->on('credito');
             $table->timestamps();
         });
     }
