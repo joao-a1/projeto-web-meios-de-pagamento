@@ -30,6 +30,7 @@ return array(
     'App\\Http\\Requests\\Auth\\LoginRequest' => $baseDir . '/app/Http/Requests/Auth/LoginRequest.php',
     'App\\Models\\Cidade' => $baseDir . '/app/Models/Cidade.php',
     'App\\Models\\Cliente' => $baseDir . '/app/Models/Cliente.php',
+    'App\\Models\\Credito' => $baseDir . '/app/Models/Credito.php',
     'App\\Models\\Empresa' => $baseDir . '/app/Models/Empresa.php',
     'App\\Models\\Status' => $baseDir . '/app/Models/Status.php',
     'App\\Models\\Transacao' => $baseDir . '/app/Models/Transacao.php',

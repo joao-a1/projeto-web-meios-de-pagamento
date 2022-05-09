@@ -534,6 +534,7 @@ class ComposerStaticInit527eddad3ceb9e9052aa55c8806e3c83
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Models\\Cidade' => __DIR__ . '/../..' . '/app/Models/Cidade.php',
         'App\\Models\\Cliente' => __DIR__ . '/../..' . '/app/Models/Cliente.php',
+        'App\\Models\\Credito' => __DIR__ . '/../..' . '/app/Models/Credito.php',
         'App\\Models\\Empresa' => __DIR__ . '/../..' . '/app/Models/Empresa.php',
         'App\\Models\\Status' => __DIR__ . '/../..' . '/app/Models/Status.php',
         'App\\Models\\Transacao' => __DIR__ . '/../..' . '/app/Models/Transacao.php',
