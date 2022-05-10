@@ -10,7 +10,7 @@ class Empresa extends Model
     use HasFactory;
     protected $table = "empresas";
 
-    function empresas(){
+    function transacoes(){
         return $this->hasMany(Transacao::class, 'id_empresa', 'id');
     }
 }

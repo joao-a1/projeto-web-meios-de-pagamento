@@ -13,6 +13,6 @@ class Credito extends Model
     protected $table = "credito";
 
     function clientes(){
-        return $this->belongsTo(Cliente::class, 'id_cidade', 'id');
+        return $this->belongsTo(Cliente::class, 'id_cliente', 'id');
     }
 }

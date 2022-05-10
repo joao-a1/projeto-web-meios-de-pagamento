@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Cidade;
+use App\Models\Credito;
 
 class Cliente extends Model
 {
@@ -15,7 +16,8 @@ class Cliente extends Model
     function cidade(){
         return $this->belongsTo(Cidade::class, 'id_cidade', 'id');
     }
+
     function credito(){
-        return $this->belongsTo(Cidade::class, 'id_credito', 'id');
+        return $this->hasMany(Credito::class, 'id_cliente', 'id');
     }
 }
