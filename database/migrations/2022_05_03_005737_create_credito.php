@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transacao', function (Blueprint $table) {
+        Schema::create('credito', function (Blueprint $table) {
             $table->id();
-            $table->date('data');
-            $table->unsignedBigInteger('id_empresa');
-            $table->foreign('id_empresa')->references('id')->on('empresas');
-            $table->unsignedBigInteger('status');
-            $table->foreign('status')->references('nome')->on('status');
-            $table->double('valor', 15, 2);
+            $table->double('saldo', 20, 2);
+            $table->unsignedBigInteger('id_cliente');
+
+            $table->foreign('id_cliente')->references('id')->on('clientes');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transacao');
+        Schema::dropIfExists('credito');
     }
 };

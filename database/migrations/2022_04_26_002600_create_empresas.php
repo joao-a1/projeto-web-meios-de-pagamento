@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('razaoSocial',100);
-            $table->integer('CNPJ');
-            $table->string('telefone',15);
-            $table->string('tokenAcesso',100);
+            $table->string('razaoSocial', 100);
+            $table->string('CNPJ', 20);
+            $table->string('telefone', 15);
+            $table->string('email', 40);
+            $table->string('tokenAcesso', 100);
             $table->double('saldo', 15, 2);
-
+            $table->timestamps();
         });
     }
 

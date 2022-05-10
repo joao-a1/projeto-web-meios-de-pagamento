@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Transacao extends Model
 {
     use HasFactory;
-    protected $table = "transacao";
+    protected $table = "transacoes";
 
     function status(){
         return $this->belongsTo(Status::class, 'status', 'nome');
     }
 
     function empresas(){
-        return $this->belongsTo(Status::class, 'id_empresa', 'id');
+        return $this->belongsTo(Empresa::class, 'id_empresa', 'id');
     }
 }
