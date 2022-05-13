@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('transacoes', function (Blueprint $table) {
             $table->id();
-            $table->date('data');
             $table->unsignedBigInteger('id_empresa');
 
             $table->foreign('id_empresa')->references('id')->on('empresas');

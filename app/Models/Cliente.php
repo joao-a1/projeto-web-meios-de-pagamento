@@ -17,7 +17,7 @@ class Cliente extends Model
         return $this->belongsTo(Cidade::class, 'id_cidade', 'id');
     }
 
-    function credito(){
+    function creditos(){
         return $this->hasMany(Credito::class, 'id_cliente', 'id');
     }
 }
