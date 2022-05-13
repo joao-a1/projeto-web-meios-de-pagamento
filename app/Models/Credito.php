@@ -12,7 +12,7 @@ class Credito extends Model
     use HasFactory;
     protected $table = "credito";
 
-    function clientes(){
+    function cliente(){
         return $this->belongsTo(Cliente::class, 'id_cliente', 'id');
     }
 }
