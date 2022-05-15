@@ -48,14 +48,15 @@
             </nav>
         </div>
         <br>
-        <div class="row">
+    </div>
+
+    <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
             @yield('conteudo')
             </div>
             <div class="col-2"></div>
         </div>
-    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
