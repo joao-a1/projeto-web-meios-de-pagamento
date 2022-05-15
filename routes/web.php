@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\EmpresasController;
+use App\Http\Controllers\CidadesController;
+use App\Http\Controllers\TransacoesController;
+use App\Http\Controllers\CreditosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,11 +47,11 @@ Route::middleware('auth')->group(function () {
         Route::post('/transacoes/alterar/', [TransacoesController::class, 'salvar'])->name('transacoes_salvar');
         Route::get('/transacoes/excluir/{id}', [TransacoesController::class, 'excluir'])->name('transacoes_excluir');
 
-        Route::get('/creditos/novo', [EmpresasController::class, 'cadastro_novo']);
-        Route::post('/creditos/novo', [EmpresasController::class, 'novo'])->name('creditos_novo');
-        Route::get('/creditos/alterar/{id}', [EmpresasController::class, 'alterar'])->name('creditos_alterar');
-        Route::post('/creditos/alterar/', [EmpresasController::class, 'salvar'])->name('creditos_salvar');
-        Route::get('/creditos/excluir/{id}', [EmpresasController::class, 'excluir'])->name('creditos_excluir');
+        Route::get('/creditos/novo', [CreditosController::class, 'cadastro_novo']);
+        Route::post('/creditos/novo', [CreditosController::class, 'novo'])->name('creditos_novo');
+        Route::get('/creditos/alterar/{id}', [CreditosController::class, 'alterar'])->name('creditos_alterar');
+        Route::post('/creditos/alterar/', [CreditosController::class, 'salvar'])->name('creditos_salvar');
+        Route::get('/creditos/excluir/{id}', [CreditosController::class, 'excluir'])->name('creditos_excluir');
 
         Route::get('/cidades/novo', [CidadesController::class, 'cadastro_novo']);
         Route::post('/cidades/novo', [CidadesController::class, 'novo'])->name('cidades_novo');
