@@ -10,10 +10,12 @@ use App\Models\Cidade;
 class ClientesController extends Controller
 {
     function cadastro_novo(){
-        return view('novo_cliente');
+        $cidades = Cidade::all();
+        return view('novo_cliente',["cidades"=>$cidades]);
     }
 
     function novo(Request $req){
+
         $nome = $req->input('nome');
         $cpf = $req->input('cpf');
         $telefone = $req->input('telefone');

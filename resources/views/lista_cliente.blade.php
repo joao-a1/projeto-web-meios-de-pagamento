@@ -25,7 +25,7 @@
                         <td>{{$c->email}}</td>
                         <td>{{$c->n_conta}}</td>
                         <td>{{$c->saldo}}</td>
-                        <td>{{$c->cidade}}</td>
+                        <td>{{$c->cidade->nome ?? ""}}</td>
                         <td>
                             <a href="{{ route('clientes_alterar', ['id' => $c->id]) }}" class="btn btn-warning">Alterar</a>
                             <a href="#" onclick="excluir({{ $c->id }})" class="btn btn-danger">Excluir</a>
