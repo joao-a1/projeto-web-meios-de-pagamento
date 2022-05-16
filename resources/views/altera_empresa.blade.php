@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('titulo')
-Alterar empresa - #{{ $empresa->id }}
+Alterar Empresa
 @endsection
 
 @section('conteudo')
