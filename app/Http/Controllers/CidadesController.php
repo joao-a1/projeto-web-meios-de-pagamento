@@ -9,7 +9,7 @@ use App\Models\Cidade;
 class CidadesController extends Controller
 {
     function cadastro_novo(){
-        return view('nova_cidade');
+        return view('novo_cidade');
     }
 
     function novo(Request $req){
