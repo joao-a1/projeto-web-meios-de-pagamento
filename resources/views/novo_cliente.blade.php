@@ -24,7 +24,7 @@ Cliente - Novo
                                 <input input type = "text" name = "email" class="form-control" placeholder="Email" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                <input input type = "text" name = "senha" class="form-control" placeholder="Senha" required="required">
+                                <input input type = "password" name = "senha" class="form-control" placeholder="Senha" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
                                  <input type = "text" name = "n_conta" class="form-control" placeholder="Número da Conta" required="required">
@@ -33,7 +33,7 @@ Cliente - Novo
                                 <input input type = "text" name = "saldo" class="form-control" placeholder="Saldo" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">                                
-                                <select name="id_cidade">
+                                <select name="id_cidade" class="form-select">
                                 @foreach($cidades as $c)
                                 <option value="{{$c->id}}">{{$c->nome}}</option>
                                 @endforeach
