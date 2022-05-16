@@ -22,7 +22,7 @@
                         <td>{{$e->cnjp}}</td>
                         <td>{{$e->telefone}}</td>
                         <td>{{$e->email}}</td>
-                        <td>{{$e->toke_acesso}}</td>
+                        <td>{{$e->token_acesso}}</td>
                         <td>{{$e->saldo}}</td>
                         <td>
                             <a href="{{ route('empresas_alterar', ['id' => $e->id]) }}" class="btn btn-warning">Alterar</a>
