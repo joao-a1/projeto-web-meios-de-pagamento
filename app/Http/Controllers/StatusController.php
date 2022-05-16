@@ -16,7 +16,7 @@ class StatusController extends Controller
         $nome_status = $req->input('nome_status');
 
         $status = new Status();
-        $cliente->nome_status = $nome_status;
+        $status->nome_status = $nome_status;
 
         $status->save();
 

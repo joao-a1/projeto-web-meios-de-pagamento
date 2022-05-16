@@ -29,11 +29,17 @@ Transação - Novo
                                 </select>
                             </div>
 
-                           
-
                             <div class="form-group pt-3 pb-3">
-                                <input input type = "text" name = "id_status" class="form-control" placeholder="Id Status" required="required">
+                                <select name="id_status" class="form-select">
+                                    @foreach($status as $s)
+
+                                    <option value="{{$s->id}}">{{$s->nome_status}}</option>
+
+                                    @endforeach
+
+                                </select>
                             </div>
+
                            
                             <div class="form-group pt-3 pb-3">
                                 <button type="submit" class="btn btn-success">Cadastrar</button>

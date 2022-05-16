@@ -6,6 +6,8 @@ use App\Http\Controllers\EmpresasController;
 use App\Http\Controllers\CidadesController;
 use App\Http\Controllers\TransacoesController;
 use App\Http\Controllers\CreditosController;
+use App\Http\Controllers\StatusController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +62,13 @@ Route::get('/dashboard', function () {
         Route::post('/cidades/alterar/', [CidadesController::class, 'salvar'])->name('cidades_salvar');
         Route::get('/cidades/excluir/{id}', [CidadesController::class, 'excluir'])->name('cidades_excluir');
         Route::get('/cidades/listar', [CidadesController::class, 'listar'])->name('cidades_listar');
+
+        Route::get('/status/novo', [StatusController::class, 'cadastro_novo']);
+        Route::post('/status/novo', [StatusController::class, 'novo'])->name('status_novo');
+        Route::get('/status/alterar/{id}', [StatusController::class, 'alterar'])->name('status_alterar');
+        Route::post('/status/alterar/', [StatusController::class, 'salvar'])->name('status_salvar');
+        Route::get('/status/excluir/{id}', [StatusController::class, 'excluir'])->name('status_excluir');
+        Route::get('/status/listar', [StatusController::class, 'listar'])->name('status_listar');
 
 
     Route::middleware('auth')->group(function () {

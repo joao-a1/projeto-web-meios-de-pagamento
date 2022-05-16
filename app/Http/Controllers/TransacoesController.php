@@ -12,7 +12,8 @@ class TransacoesController extends Controller
 {
     function cadastro_novo(){
         $empresas = Empresa::all();
-        return view('nova_transacao',["empresas"=>$empresas]);
+        $status = Status::all();
+        return view('nova_transacao',["empresas"=>$empresas],['status'=>$status]);
     }
 
     function novo(Request $req){
