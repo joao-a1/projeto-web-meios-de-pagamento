@@ -15,10 +15,10 @@ Cliente - Novo
                                 <input input type = "text" name = "nome" class="form-control" placeholder="Nome" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                <input input type = "text" name = "cpf" class="form-control" placeholder="CPF" required="required">
+                                <input input type = "text" name = "cpf" id="inputCPF" class="form-control" placeholder="CPF" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                 <input type = "text" name = "telefone" class="form-control" placeholder="Telefone" required="required">
+                                 <input type = "text" name = "telefone" id="inputTelefone" class="form-control" placeholder="Telefone" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
                                 <input input type = "text" name = "email" class="form-control" placeholder="Email" required="required">
@@ -45,5 +45,19 @@ Cliente - Novo
                             </div>
                          </form>
                 </div>
-            </div>   
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(
+        function(){
+            $("#inputCPF").mask("000.000.000-00");
+            $("#inputTelefone").mask("(00) 0000-0000");
+
+
+        }
+    );
+</script>
+   
 @endsection
