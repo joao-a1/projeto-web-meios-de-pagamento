@@ -32,6 +32,9 @@ Alterar cliente - #{{ $cliente->id }}
                             <div class="form-group pt-3 pb-3">
                                  <input value="{{ $cliente->saldo }}" type = "text" name = "saldo" class="form-control" placeholder="Senha" required="required">
                             </div>
+                            <div class="form-group pt-3 pb-3">
+                                 <input value="{{ $cliente->id_cidade }}" type = "text" name = "id_cidade" class="form-control" placeholder="ID-Cidade" required="required">
+                            </div>
                         
                             <div class="form-group pt-3 pb-3">
                                 <button type="submit" class="btn btn-success">Enviar</button>
