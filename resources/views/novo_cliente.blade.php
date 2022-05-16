@@ -55,7 +55,6 @@ Cliente - Novo
             $("#inputCPF").mask("000.000.000-00");
             $("#inputTelefone").mask("(00) 0000-0000");
 
-
         }
     );
 </script>
