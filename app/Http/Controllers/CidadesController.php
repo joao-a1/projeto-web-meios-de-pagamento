@@ -10,6 +10,7 @@ class CidadesController extends Controller
 {
     function cadastro_novo(){
         return view('novo_cidade');
+        
     }
 
     function novo(Request $req){

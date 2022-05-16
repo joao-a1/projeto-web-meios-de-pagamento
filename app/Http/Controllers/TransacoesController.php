@@ -11,7 +11,8 @@ use App\Models\Status;
 class TransacoesController extends Controller
 {
     function cadastro_novo(){
-        return view('nova_transacao');
+        $empresas = Empresa::all();
+        return view('nova_transacao',["empresas"=>$empresas]);
     }
 
     function novo(Request $req){

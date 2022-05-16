@@ -28,8 +28,8 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-</table>
+</div>
+
 
 <script>
     function excluir(id){

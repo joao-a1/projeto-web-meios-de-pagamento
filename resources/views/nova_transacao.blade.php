@@ -19,8 +19,18 @@ Transação - Novo
                             </div>
 
                             <div class="form-group pt-3 pb-3">
-                                <input input type = "text" name = "id_empresa" class="form-control" placeholder="Id Empresa" required="required">
+                                <select name="id_empresa" class="form-select">
+                                    @foreach($empresas as $e)
+
+                                    <option value="{{$e->id}}">{{$e->razao_social}}</option>
+
+                                    @endforeach
+
+                                </select>
                             </div>
+
+                           
+
                             <div class="form-group pt-3 pb-3">
                                 <input input type = "text" name = "id_status" class="form-control" placeholder="Id Status" required="required">
                             </div>
@@ -30,5 +40,7 @@ Transação - Novo
                             </div>
                          </form>
                 </div>
-            </div>   
+            </div> 
+
 @endsection
+
