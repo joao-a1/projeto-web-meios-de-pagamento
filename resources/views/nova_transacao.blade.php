@@ -9,7 +9,7 @@ Transação - Novo
 <div class="container col-7">
                 <div class="row pt-5 pb-5 text-center">
                         <form class="form-group" method = "post" action ="{{route('transacoes_novo')}}">             
-                            <h2 class="text-center">Cadastro de Clientes</h2>
+                            <h2 class="text-center">Cadastro de Transações</h2>
                             @csrf
                             <div class="form-group pt-3 pb-3">
                                 <input input type = "date" name = "data" class="form-control" placeholder="Data" required="required">
