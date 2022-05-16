@@ -32,6 +32,9 @@ Cliente - Novo
                             <div class="form-group pt-3 pb-3">
                                 <input input type = "text" name = "saldo" class="form-control" placeholder="Saldo" required="required">
                             </div>
+                            <div class="form-group pt-3 pb-3">
+                                <input input type = "text" name = "cidade" class="form-control" placeholder="Cidade" required="required">
+                            </div>
                             
                             <div class="form-group pt-3 pb-3">
                                 <button type="submit" class="btn btn-success">Cadastrar</button>

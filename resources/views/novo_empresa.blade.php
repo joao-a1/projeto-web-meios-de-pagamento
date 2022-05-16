@@ -12,7 +12,7 @@ Empresas - Novo
                             <h2 class="text-center">Cadastro de Empresas</h2>
                             @csrf
                             <div class="form-group pt-3 pb-3">
-                                <input input type = "text" name = "razao-social" class="form-control" placeholder="Nome" required="required">
+                                <input input type = "text" name = "razao_social" class="form-control" placeholder="Razão Social" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
                                 <input input type = "text" name = "cnpj" class="form-control" placeholder="CNPJ" required="required">

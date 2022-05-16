@@ -42,7 +42,7 @@ class EmpresasController extends Controller
     function alterar($id){
         $empresa = Empresa::findOrFail($id);
 
-        return view('altera_empresa', ['empresas' => $empresa]);
+        return view('altera_empresa', ['empresa' => $empresa]);
     }
 
     function salvar(Request $req){
