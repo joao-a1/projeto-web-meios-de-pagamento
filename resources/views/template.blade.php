@@ -31,16 +31,16 @@
                         Empresas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">Cadastro Empresas </a></li>
-                        <li><a class="dropdown-item" href="">Lista Empresas </a></li>
+                        <li><a class="dropdown-item" href="/empresas/novo">Cadastro Empresas </a></li>
+                        <li><a class="dropdown-item" href="/empresas/listar">Lista Empresas </a></li>
                     </ul>
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                        Transações 
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">Nova Transação</a></li>
-                        <li><a class="dropdown-item" href="">Lista de Transações</a></li>
+                        <li><a class="dropdown-item" href="/transacoes/novo">Nova Transação</a></li>
+                        <li><a class="dropdown-item" href="/transacoes/listar">Lista de Transações</a></li>
                     </ul>
                 </ul>
                 </div>

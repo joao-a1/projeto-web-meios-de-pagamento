@@ -9,7 +9,7 @@ use App\Models\Empresa;
 class EmpresasController extends Controller
 {
     function cadastro_novo(){
-        return view('nova_empresa');
+        return view('novo_empresa');
     }
 
     function novo(Request $req){

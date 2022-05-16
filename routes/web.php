@@ -32,10 +32,7 @@ Route::get('/dashboard', function () {
         Route::get('/clientes/excluir/{id}', [ClientesController::class, 'excluir'])->name('clientes_excluir');
         Route::get('/clientes/listar', [ClientesController::class, 'listar'])->name('clientes_listar');
 
-Route::middleware('auth')->group(function () {
-    Route::middleware('verifica.nivel')->group(function(){
-    
-        Route::get('/empresas/novo', [EmpresasController::class, 'cadastro_novo']);
+        Route::get('/empresas/novo', [EmpresasController::class, 'cadastro_novo']);  
         Route::post('/empresas/novo', [EmpresasController::class, 'novo'])->name('empresas_novo');
         Route::get('/empresas/alterar/{id}', [EmpresasController::class, 'alterar'])->name('empresas_alterar');
         Route::post('/empresas/alterar/', [EmpresasController::class, 'salvar'])->name('empresas_salvar');
@@ -64,6 +61,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/cidades/excluir/{id}', [CidadesController::class, 'excluir'])->name('cidades_excluir');
         Route::get('/cidades/listar', [CidadesController::class, 'listar'])->name('cidades_listar');
 
+
+    Route::middleware('auth')->group(function () {
+        Route::middleware('verifica.nivel')->group(function(){
         
     });
 });
