@@ -23,12 +23,7 @@ Alterar Empresa
                             <div class="form-group pt-3 pb-3">
                                  <input value="{{ $empresa->email }}" type = "text" name = "email" class="form-control" placeholder="Email" required="required">
                             </div>
-                            <div class="form-group pt-3 pb-3">
-                                 <input value="{{ $empresa->token_acesso }}" type = "text" name = "token_acesso" class="form-control" placeholder="Token de Acesso" required="required">
-                            </div>
-                            <div class="form-group pt-3 pb-3">
-                                 <input value="{{ $empresa->saldo }}" type = "text" name = "saldo" class="form-control" placeholder="Saldo" required="required">
-                            </div>
+                    
                         
                             <div class="form-group pt-3 pb-3">
                                 <button type="submit" class="btn btn-success">Enviar</button>

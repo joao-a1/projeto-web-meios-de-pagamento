@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telefone', 15);
             $table->string('email', 40);
             $table->string('token_acesso', 100);
-            $table->double('saldo', 15, 2);
+            $table->double('saldo', 15, 2)->nullable();
             $table->timestamps();
         });
     }

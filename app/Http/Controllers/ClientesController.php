@@ -60,7 +60,6 @@ class ClientesController extends Controller
         $email = $req->input('email');
         $senha = $req->input('senha');
         $n_conta = $req->input('n_conta');
-        $saldo = $req->input('saldo');
         $id_cidade = $req->input('id_cidade');
 
         $cliente = Cliente::findOrFail($id);
