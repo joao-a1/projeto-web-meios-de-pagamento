@@ -29,9 +29,7 @@ Alterar cliente - #{{ $cliente->id }}
                             <div class="form-group pt-3 pb-3">
                                  <input value="{{ $cliente->n_conta }}" type = "text" name = "n_conta" class="form-control" placeholder="Nº Conta" required="required">
                             </div>
-                            <div class="form-group">
-                                 <input value="{{ $cliente->saldo }}" type = "hidden" name = "saldo" class="form-control" placeholder="Saldo">
-                            </div>
+                            
                             <div class="form-group pt-3 pb-3">
                                 <a class="w-100 text-left btn btn-primary" href="/creditos/novo">Adicionar Crédito</a>
                             </div>

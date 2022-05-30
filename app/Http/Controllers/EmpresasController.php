@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Empresa;
 
 class EmpresasController extends Controller
@@ -17,7 +18,7 @@ class EmpresasController extends Controller
         $cnpj = $req->input('cnpj');
         $telefone = $req->input('telefone');
         $email = $req->input('email');
-        $token_acesso = $req->input('token_acesso');
+        $token_acesso = Hash::make($req->input('token_acesso'));
         $saldo = $req->input('saldo');
 
         $empresa = new Empresa();
