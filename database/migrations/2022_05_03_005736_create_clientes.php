@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 200);
+            $table->string('nome', 200)->nullable();
             $table->string('cpf', 14);
-            $table->string('telefone', 15);
-            $table->string('email', 30);
-            $table->string('senha', 100);
-            $table->string('n_conta', 10);
-            $table->double('saldo', 20, 2)->nullable();
+            $table->string('telefone', 15)->nullable();
+            $table->string('email', 30)->nullable();
+            $table->string('senha', 100)->nullable();
+            $table->string('n_conta', 10)->nullable();
+            $table->double('saldo', 20, 2);
             $table->unsignedBigInteger('id_cidade')->nullable();
 
             $table->foreign('id_cidade')->references('id')->on('cidades');
