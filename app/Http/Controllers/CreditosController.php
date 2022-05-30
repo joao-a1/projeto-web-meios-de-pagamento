@@ -10,7 +10,8 @@ use App\Models\Cliente;
 class CreditosController extends Controller
 {
     function cadastro_novo(){
-        return view('novo_credito');
+        $clientes = Cliente::all();
+        return view('novo_credito', ["clientes"=>$clientes]);
     }
 
     function novo(Request $req){
@@ -25,41 +26,6 @@ class CreditosController extends Controller
 
         $credito->save();
 
-        return redirect()->route('creditos_listar');
-    }
-
-    function listar(){
-        $credito = Credito::all();
-
-        return view('lista_credito', ['credito' => $credito]);
-    }
-
-    function alterar($id){
-        $credito = Credito::findOrFail($id);
-
-        return view('altera_credito', ['credito' => $credito]);
-    }
-
-    function salvar(Request $req){
-        $id = $req->input('id');
-        $valor = $req->input('valor');
-        $data = $req->input('data');
-        $id_cliente = $req->input('id_cliente');
-
-        $credito = Credito::findOrFail($id);
-        $credito->valor = $valor;
-        $credito->data = $data;
-        $credito->id_cliente = $id_cliente;
-
-        $credito->save();
-
-        return redirect()->route('creditos_listar');
-    }
-
-    function excluir($id){
-        $credito = Credito::findOrFail($id);
-        $credito->delete();
-
-        return redirect()->route('creditos_listar');
+        return redirect()->route('clientes_listar');
     }
 }

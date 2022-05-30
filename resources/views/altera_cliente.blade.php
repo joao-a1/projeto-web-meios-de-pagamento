@@ -8,7 +8,7 @@ Alterar cliente - #{{ $cliente->id }}
 <div class="container">
                 <div class="row pt-5 pb-5 text-center">
                         <form class="form-group" method = "post" action ="{{ route('clientes_salvar') }}">             
-                            <h2 class="text-center">Alterar cliente - #{{ $cliente->id }}</h2>
+                            <h2 class="text-center">Alterar cliente - {{ $cliente->id }}</h2>
                             @csrf
                             <input type="hidden" name="id" value="{{ $cliente->id }}">
                             <div class="form-group pt-3 pb-3">
@@ -27,13 +27,16 @@ Alterar cliente - #{{ $cliente->id }}
                                  <input value="{{ $cliente->senha }}" type = "text" name = "senha" class="form-control" placeholder="Senha" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                 <input value="{{ $cliente->n_conta }}" type = "text" name = "n_conta" class="form-control" placeholder="Senha" required="required">
+                                 <input value="{{ $cliente->n_conta }}" type = "text" name = "n_conta" class="form-control" placeholder="Nº Conta" required="required">
+                            </div>
+                            <div class="form-group">
+                                 <input value="{{ $cliente->saldo }}" type = "hidden" name = "saldo" class="form-control" placeholder="Saldo">
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                 <input value="{{ $cliente->saldo }}" type = "text" name = "saldo" class="form-control" placeholder="Senha" required="required">
+                                <a class="w-100 text-left btn btn-primary" href="/creditos/novo">Adicionar Crédito</a>
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                 <input value="{{ $cliente->id_cidade }}" type = "text" name = "id_cidade" class="form-control" placeholder="ID-Cidade" required="required">
+                                 <input value="{{ $cliente->id_cidade }}" type = "text" name = "id_cidade" class="form-control" placeholder="Cidade">
                             </div>
                         
                             <div class="form-group pt-3 pb-3">

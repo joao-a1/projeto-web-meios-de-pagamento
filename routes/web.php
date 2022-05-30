@@ -53,10 +53,7 @@ Route::get('/dashboard', function () {
     
             Route::get('/creditos/novo', [CreditosController::class, 'cadastro_novo']);
             Route::post('/creditos/novo', [CreditosController::class, 'novo'])->name('creditos_novo');
-            Route::get('/creditos/alterar/{id}', [CreditosController::class, 'alterar'])->name('creditos_alterar');
             Route::post('/creditos/alterar/', [CreditosController::class, 'salvar'])->name('creditos_salvar');
-            Route::get('/creditos/excluir/{id}', [CreditosController::class, 'excluir'])->name('creditos_excluir');
-            Route::get('/creditos/listar', [CreditosController::class, 'listar'])->name('creditos_listar');
     
             Route::get('/cidades/novo', [CidadesController::class, 'cadastro_novo']);
             Route::post('/cidades/novo', [CidadesController::class, 'novo'])->name('cidades_novo');

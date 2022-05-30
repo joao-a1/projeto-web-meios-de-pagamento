@@ -1,15 +1,15 @@
 @extends('template')
 
 @section('titulo')
-Transação - Novo
+Crédito - Novo
 @endsection
 
 @section('conteudo')
 
 <div class="container col-7">
                 <div class="row pt-5 pb-5 text-center">
-                        <form class="form-group" method = "post" action ="{{route('transacoes_novo')}}">             
-                            <h2 class="text-center">Cadastro de Transações</h2>
+                        <form class="form-group" method = "post" action ="{{route('creditos_novo')}}">             
+                            <h2 class="text-center">Cadastro de Crédito</h2>
                             @csrf
                             <div class="form-group pt-3 pb-3">
                                 <input input type = "date" value="2022-05-30" name = "data" class="form-control" required="required">
@@ -19,29 +19,15 @@ Transação - Novo
                             </div>
 
                             <div class="form-group pt-3 pb-3">
-                                <select name="id_empresa" class="form-select">
-                                    <option value="">Empresa</option>
-                                    @foreach($empresas as $e)
+                                <select name="id_cliente" class="form-select">
+                                    @foreach($clientes as $c)
 
-                                    <option value="{{$e->id}}">{{$e->razao_social}}</option>
-
-                                    @endforeach
-
-                                </select>
-                            </div>
-
-                            <div class="form-group pt-3 pb-3">
-                                <select name="id_status" class="form-select">
-                                    <option value="">Status</option>
-                                    @foreach($status as $s)
-
-                                    <option value="{{$s->id}}">{{$s->nome_status}}</option>
+                                    <option value="{{$c->id}}">{{$c->nome}}</option>
 
                                     @endforeach
 
                                 </select>
                             </div>
-
                            
                             <div class="form-group pt-3 pb-3">
                                 <button type="submit" class="btn btn-success">Cadastrar</button>
