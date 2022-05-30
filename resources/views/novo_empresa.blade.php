@@ -24,7 +24,7 @@ Empresas - Novo
                                 <input input type = "text" name = "email" class="form-control" placeholder="Email" required="required">
                             </div>
                             <div class="form-group pt-3 pb-3">
-                                <input input type = "text" name = "token_acesso" class="form-control" placeholder="Token" required="required">
+                                <input input type = "text" name = "token_acesso" class="form-control" placeholder="Senha" required="required">
                             </div>
                             
                             <div class="form-group pt-3 pb-3">
