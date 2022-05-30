@@ -15,6 +15,10 @@
 	        display: none;
         }
 
+        .div_scroll {
+            overflow: auto;
+        }
+
     </style>
     <title>@yield('titulo')</title>
   </head>
