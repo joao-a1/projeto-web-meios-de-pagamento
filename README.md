@@ -9,15 +9,20 @@
 
 ## About Laravel
 
- Para consumir a API, deverá ser passado um json no body da requisição.
- Ex:  {
+ Para consumir a API, deverá ser passado um json no body da requisição com os seguintes parâmetros:
+ ~~~
+ token -> string
+ cpf -> string ( no formato =(000.000.000-00))
+ valor -> float
+ ~~~
+ ~~~ 
+ Exemplo:  
+ {
 	"token":"$2y$10$xhknTbnKuCs/OvmfU/K9Ruex3jMSLUt28hWLjFJvtwKuqpsqwLdvO",
 	"CpfCliente":"110.418.659-38",
 	"valor":10.00
 }
-token -> string
-cpf -> string ( no formato =(000.000.000-00))
-valor -> float
+~~~
 
 Devera ser realizado o cadastro do login no seguinte caminho:
 url = http://10.41.1.4/
