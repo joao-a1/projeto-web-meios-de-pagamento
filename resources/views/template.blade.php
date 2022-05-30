@@ -46,7 +46,8 @@
                        Transações 
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/transacoes/listar">Lista de Transações</a></li>
+                        <li><a class="dropdown-item" href="/transacoes/novo">Nova Transação</a></li>
+                        <li><a class="dropdown-item" href="/transacoes/listar">Lista de Transações</a></li>                   
                     </ul>
                 </ul>
                 </div>

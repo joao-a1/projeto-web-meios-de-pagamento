@@ -29,6 +29,9 @@ Cliente - Novo
                             <div class="form-group pt-3 pb-3">
                                  <input type = "text" name = "n_conta" class="form-control" placeholder="Número da Conta" required="required">
                             </div>
+                            <div class="form-group pt-3 pb-3">
+                                 <input type = "text" name = "saldo" class="form-control" placeholder="Saldo" required="required">
+                            </div>
                             
                             <div class="form-group pt-3 pb-3">                                
                                 <select name="id_cidade" class="form-select">
