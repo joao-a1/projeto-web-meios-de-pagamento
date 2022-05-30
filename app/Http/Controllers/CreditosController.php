@@ -25,6 +25,11 @@ class CreditosController extends Controller
         $credito->id_cliente = $id_cliente;
 
         $credito->save();
+        
+        $cliente = Cliente::findOrFail($id_cliente);
+
+        $cliente->saldo = $cliente->saldo + $valor;
+        $cliente->save();
 
         return redirect()->route('clientes_listar');
     }
