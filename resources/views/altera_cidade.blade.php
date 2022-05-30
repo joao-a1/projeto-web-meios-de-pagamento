@@ -9,7 +9,7 @@ Cidade - Novo
 <div class="container col-7">
                 <div class="row pt-5 pb-5 text-center">
                         <form class="form-group" method = "post" action ="{{route('cidades_salvar')}}">             
-                            <h2 class="text-center">Alterar cidade - #{{ $cidade->id }}</h2>
+                            <h2 class="text-center">Alterar cidade - {{ $cidade->id }}</h2>
                             @csrf
                             <input type="hidden" name="id" value="{{ $cidade->id }}">
                             <div class="form-group pt-3 pb-3">

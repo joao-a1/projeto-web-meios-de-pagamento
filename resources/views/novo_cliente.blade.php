@@ -34,6 +34,7 @@ Cliente - Novo
                             </div>
                             <div class="form-group pt-3 pb-3">                                
                                 <select name="id_cidade" class="form-select">
+                                <option value="">Selecione...</option>
                                 @foreach($cidades as $c)
                                 <option value="{{$c->id}}">{{$c->nome}}</option>
                                 @endforeach

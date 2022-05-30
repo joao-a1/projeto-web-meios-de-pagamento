@@ -8,7 +8,7 @@ Alterar Empresa
 <div class="container">
                 <div class="row pt-5 pb-5 text-center">
                         <form class="form-group" method = "post" action ="{{ route('empresas_salvar') }}">             
-                            <h2 class="text-center">Alterar empresa - #{{ $empresa->id }}</h2>
+                            <h2 class="text-center">Alterar empresa - {{ $empresa->id }}</h2>
                             @csrf
                             <input type="hidden" name="id" value="{{ $empresa->id }}">
                             <div class="form-group pt-3 pb-3">
