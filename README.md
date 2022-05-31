@@ -9,10 +9,10 @@
 
 ## About Laravel
 
- Para consumir a API, deverá ser passado um json no body da requisição com os seguintes parâmetros:
+ ## Para consumir a API, deverá ser passado um json no body da requisição com os seguintes parâmetros:
  ~~~
  token -> string
- cpf -> string ( no formato =(000.000.000-00))
+ CpfCliente -> string ( no formato =(000.000.000-00))
  valor -> float
  ~~~
  ~~~ 
@@ -24,16 +24,46 @@
 }
 ~~~
 
-Devera ser realizado o cadastro do login no seguinte caminho:
+### Devera ser realizado o cadastro do login no seguinte caminho:
 url = http://10.41.1.4/
 
-Devera ser realizado o cadastro da empresa no seguinte caminho:
+### Devera ser realizado o cadastro da empresa no seguinte caminho:
 url = http://10.41.1.4/empresas/novo
 
-Devera ser realizado o cadastro do cliente no seguinte caminho:
+### Para listar Empresas cadastradas
+url = http://10.41.1.4/empresas/listar
+### OBS: Caso não seja possivel listar a empresa, contate os mestres da API, para fornecer nível de usuario. Ou coloque você mesmo lá no banco nível 1. Voces tem Acesso
+
+### Devera ser realizado o cadastro do cliente no seguinte caminho:
 url = http://10.41.1.4/clientes/novo
 
-A requisição deverá ser feito no seguinte caminho:
+### A requisição deverá ser feito no seguinte caminho:
 url = http://10.41.1.4/api/pagamentos/
+
+## Possíveis status de retornos:
+Sucesso: Se a transação de pagamento for concluída com sucesso.
+~~~
+{
+ "status":"Sucesso", 
+ "Mensagem":"Pagamento Realizado "
+}
+~~~
+## Serão dois os casos que poderão retornar Insucesso
+
+Insucesso: Saldo cliente indisponível
+~~~
+{
+ "status":"Insucesso", 
+ "Mensagem":"Saldo Indisponivel "
+}
+~~~
+Insucesso: Token Não identificado
+~~~
+{
+ "status":"Insucesso", 
+ "Mensagem":"Token não identificado "
+}
+~~~
+
 
 
